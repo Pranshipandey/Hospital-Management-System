@@ -10,6 +10,12 @@
     <%= f.label :password %>
     <%= f.password_field :password, autocomplete: 'current-password', class: 'form-control' %>
   </div>
+ <div class="field">    
+          <%= f.label :role %></br>
+          <span class="option">Administrator<span><%= f.radio_button :role, "Administrator" %></br>
+          <span class="option">Doctor<span><%= f.radio_button :role, "Doctor" %></br>
+          <span class="option">Patient<span><%= f.radio_button :role, "Patient" %></br>
+        </div>
 
   <% if devise_mapping.rememberable? %>
     <div class="form-group form-check">
