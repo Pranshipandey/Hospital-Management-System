@@ -1,1 +1,22 @@
-<h1>Showing Hospital details</h>
+<h1>Hospitals Infomation Page</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Address</th>
+      <th>Specialization</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hospitals.each do |hospital| %>
+      <tr>
+        <td><%= hospital.name %></td>
+        <td><%= hospital.description %></td>
+        <td><%= hospital.address %></td>
+        <td><%= hospital.specialization %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
