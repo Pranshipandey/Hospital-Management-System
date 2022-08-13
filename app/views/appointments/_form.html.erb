@@ -41,10 +41,11 @@
     <%= form.text_area :description %>
   </div>
 
-  <div>
-    <%= form.label :hospital_id, style: "display: block" %>
-    <%= form.number_field :hospital_id %>
-  </div>
+   <div class="field">
+          <%= form.label :hospital %><br>
+          <%= form.collection_select :hospital_id, Hospital.all, :id, :name %>
+        </div>
+      </div>
 
   <div>
     <%= form.submit %>

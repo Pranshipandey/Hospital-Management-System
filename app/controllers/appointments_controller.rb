@@ -19,6 +19,10 @@ class AppointmentsController < ApplicationController
   def edit
   end
 
+  def save 
+    @appointment = Appointment.save
+  end
+
   # POST /appointments or /appointments.json
   def create
     @appointment = Appointment.new(appointment_params)

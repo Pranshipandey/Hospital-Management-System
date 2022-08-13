@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :appointments
   resources :departments
   resources :hospitals, only: [:show, :index]
+   resources :users, only: [:show, :index]
   devise_for :users
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
